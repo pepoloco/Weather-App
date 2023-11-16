@@ -56,33 +56,34 @@ const WeatherApp = () => {
     }
     return (
         <div className='container'>
-            <div className="top-bar"></div>
-            <input type="text" className="cityInput" placeholder='search' />
-            <div className="search-icon" onClick={() => { search() }}>
-                <img src={search_icon} alt="" />
+            <div className="top-bar">
+                <input type="text" className="cityInput" placeholder='search' />
+                <div className="search-icon" onClick={() => { search() }}>
+                    <img src={search_icon} alt="" />
+                </div>
             </div>
             <div className="weather-image">
                 <img src={icon} alt='' />
             </div>
             <div className="weather-temp">24c</div>
             <div className="weather-location">London</div>
-            <div className="data-container"></div>
-            <div className="element">
-                <img src={humidity_icon} alt='' className='icon' />
-                <div className='data'>
-                    <div className='humidity-percent'>64%</div>
-                    <div className='text'>Humidity</div>
+            <div className="data-container">
+                <div className="element">
+                    <img src={humidity_icon} alt='' className='icon' />
+                    <div className='data'>
+                        <div className='humidity-percent'>64%</div>
+                        <div className='text'>Humidity</div>
+                    </div>
                 </div>
-            </div>
-            <div className="element">
-                <img src={wind_icon} alt='' className='icon' />
-                <div className='data'>
-                    <div className='wind-rate'>18 km/h</div>
-                    <div className='text'>Wind Speed</div>
+                <div className="element">
+                    <img src={wind_icon} alt='' className='icon' />
+                    <div className='data'>
+                        <div className='wind-rate'>18 km/h</div>
+                        <div className='text'>Wind Speed</div>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
-
 export default WeatherApp
